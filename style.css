@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Rambla:400,700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font-family: Rambla, sans-serif;
+    font-size: 20px;
+}
+
+#header {
+    background-color: black;
+}
+
+h1 {
+    padding: 20px;
+    background-color: black;
+}
+
+#header {
+    color: #ffcc00;
+    text-align: center;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+}
+
+#header h1 {
+    font-family: Lobster, cursive;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 25px;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    padding: 20px;
+}
+
+b {
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+ul {
+    padding-left: 40px;
+    list-style: square;
+}
+
+ol {
+    list-style: none;
+}
+
+#js-is-dumb {
+    margin: 10px;
+}
+
+.refresh {
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 50px;
+    cursor: pointer;
+}
+
+.refresh-text {
+    font-size: xx-large;
+}
+
+.refresh:hover {
+    background-color: darkgray;
+}
+
+.logger {   
+    background-color: lightgray;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.log-item {
+    margin: 0;
+}
+
+.selected-event {
+    color: #ffcc00;
+    background-color: black !important;
+}
+
+.event-list p {
+    padding: 4px;
+    cursor: pointer;
+}
+
+.event-list p:hover {
+    background-color: lightgrey;
+}
+
+.year {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#year {
+    font-size: 20px;
+}
+
+.team:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+p {
+    margin-left: 20px;
+}

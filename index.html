@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="1719.png" />
+    <title>1719 Coach App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1>1719 Coach App</h1>
+    </div>
+    <div id="js-is-dumb">
+        <table>
+            <tr v-for="team in teams">
+                <td>{{team.team_number}}</td>
+                <td @click="onTeamClick(team)" class="team">
+                    {{team.nickname}}
+                </td>
+            </tr>
+        </table>
+        <div class="refresh" @click="refresh">
+            <p class="refresh-text">REFRESH</p>
+            <p v-html="last_modified"></p>
+        </div>
+        <div class="logger" @click="loggerToggle">
+            <p v-html="logger_status"></p>
+            <div v-if="show_logs">
+                <p v-html="log" v-for="log in logs" class="log-item"></p>
+            </div>
+        </div>
+        <div class="year">
+            <label for="year">YEAR:</label>
+            <input id="year" type="number" v-model.number="year"></input>
+            <label for="filter">SEARCH:</label>
+            <input id="filter" v-model="event_name_filter"></input>
+        </div>
+        <hr>
+        <div v-if="visible_events.length">
+            <ol class="event-list">
+                <li v-for="(event, ind) in visible_events" @click="eventClick" :data-event="ind">
+                    <p v-if="selected_index == ind" class="selected-event"><b>{{ ind + 1 }}. {{ event.name }}</b></p>
+                    <p v-if="selected_index != ind">{{ ind + 1 }}. {{ event.name }}</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- Hack -->
+    <script src="index.js"></script>
+</body>
+</html>

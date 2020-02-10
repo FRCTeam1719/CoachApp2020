@@ -1,0 +1,16 @@
+{
+    "name": "Coach App 1719",
+    "short_name": "Coach",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons":[
+        {
+            "src":"/1719.png",
+            "type":"image/png",
+            "sizes":"512x512"
+        }
+    ]
+  }

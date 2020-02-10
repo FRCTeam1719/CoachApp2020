@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../1719.png" />
+    <title>Team Data for ... | 1719 Coach App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="teamdata-app">
+        <div id="header">
+            <h1>TEAM DATA</h1>
+            <h2>For team {{team.team_number}}</h2>
+        </div>
+        <h2><b><u>{{team.nickname}}</u></b> ({{team.key}})</h2>
+        <hr>
+        <h3><u>INFO:</u></h3>
+        <ul>
+            <li>Location: {{team.city}}, {{team.state_prov}}, {{team.country}}</li>
+            <li>Sponsors:</li>
+            <ul>
+                <li v-for="sponsor in sponsors">
+                    {{sponsor}}
+                </li>
+            </ul>
+        </ul>
+
+        <hr>
+        
+        <div v-if="!scouting_data.length">
+            <h3><b v-html="loading_message"></b></h3>
+            <p style="font-size: medium;">Check your internet if it takes more than 5 seconds without updating.</p>
+        </div>
+        <h3 v-if="scouting_data.length"><b>Scouting Data</b></h3>
+        <table>
+            <tr v-for="category in scouting_data">
+                <td>
+                    {{ category[0] }}
+                </td>
+                <td style="text-align: center;">
+                    <b>{{ category[1] }}</b>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <div>
+            <!-- <table v-for="match in matches">
+                <tr v-for="alliance in match">
+                    <td v-for="ally in alliance">
+                        {{ ally }}
+                    </td>
+                </tr v-for="alliance in match">
+            </table> -->
+        </div>
+    </div>
+    <!-- Hack -->
+    <script src="teamdata.js"></script>
+</body>
+</html>
