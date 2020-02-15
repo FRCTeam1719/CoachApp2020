@@ -4,11 +4,11 @@
     "theme_color": "#FFCC00",
     "background_color": "#FFCC00",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "/CoachApp2020",
+    "start_url": "/CoachApp2020",
     "icons":[
         {
-            "src":"/1719.png",
+            "src":"CoachApp2020/1719.png",
             "type":"image/png",
             "sizes":"512x512"
         }

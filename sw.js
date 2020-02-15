@@ -1,9 +1,9 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
-  '/style.css',
-  '/index.js',
-  "/teamdata/teamdata.js"
+  'CoachApp2020/',
+  'CoachApp2020/style.css',
+  'CoachApp2020/index.js',
+  "CoachApp2020/teamdata/teamdata.js"
 ];
 self.addEventListener('install', function(event) {
   // Perform install steps
