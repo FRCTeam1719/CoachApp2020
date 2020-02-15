@@ -13,7 +13,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('CoachApp2020/sw.js').then(function(registration) {
+                navigator.serviceWorker.register('/CoachApp2020/sw.js').then(function(registration) {
                 // Registration was successful
                 console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 }, function(err) {
@@ -22,6 +22,12 @@
                 });
             });
         }
+        
+        var prompt=null;
+        window.addEventListener('beforeinstallprompt',function(e){
+            prompt=e;
+            document.querySelector('#download').classList.add('active')
+        });
     </script>
 </head>
 <body>
@@ -63,6 +69,16 @@
             </ol>
         </div>
     </div>
+    <div id="download">
+        <h2 id="dlbtn">
+            Please download this page!
+        </h2>
+    </div>
+    <script>
+        document.querySelector('#dlbtn').addEventListener('click',function(e){
+            prompt.prompt();
+        });
+    </script>
     <!-- Hack -->
     <script src="index.js"></script>
 </body>

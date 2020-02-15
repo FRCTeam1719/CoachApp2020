@@ -8,7 +8,7 @@
     "start_url": "/CoachApp2020",
     "icons":[
         {
-            "src":"CoachApp2020/1719.png",
+            "src":"/CoachApp2020/1719.png",
             "type":"image/png",
             "sizes":"512x512"
         }
