@@ -4,7 +4,7 @@
     "theme_color": "#FFCC00",
     "background_color": "#FFCC00",
     "display": "standalone",
-    "scope": "/CoachApp2020",
+    "scope": "/CoachApp2020/",
     "start_url": "/CoachApp2020/",
     "icons":[
         {
