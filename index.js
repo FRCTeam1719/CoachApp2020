@@ -1,6 +1,6 @@
 var y=0;
 
-const TBA_Auth = "kFjEvA5nZnwGMKaS9o3gR9pwNDvD2HcEktI8kOUzxb5jqbe2seobw1Iyeot7Vi2e"
+const TBA_AUTH = "kFjEvA5nZnwGMKaS9o3gR9pwNDvD2HcEktI8kOUzxb5jqbe2seobw1Iyeot7Vi2e"
 
 var app = new Vue({
   el: "#js-is-dumb",
@@ -29,7 +29,7 @@ var app = new Vue({
       refreshEvents: function () {
         fetch("https://www.thebluealliance.com/api/v3/events/" + this.year, {
           headers: {
-            "X-TBA-Auth-Key": TBA_Auth
+            "X-TBA-Auth-Key": TBA_AUTH
           }
         }).then(function(resp) {
           app.last_modified = resp.headers.get("Last-Modified")
@@ -48,7 +48,7 @@ var app = new Vue({
         console.log(this.events)
         fetch("https://www.thebluealliance.com/api/v3/event/" + this.visible_events[this.selected_index].key + "/teams/simple", {
           headers: {
-            "X-TBA-Auth-Key": TBA_Auth
+            "X-TBA-Auth-Key": TBA_AUTH
           }
         }).then(function(resp) {
           resp.json().then(function (resp) {

@@ -1,4 +1,5 @@
 const SPREASHEET_DEPLOY = "https://script.google.com/a/parkschool.net/macros/s/AKfycbyM08aGgNXSMdgdpXz7wdJsXhz4NKVtuu_EHGueew/exec"
+const TBA_AUTH = "kFjEvA5nZnwGMKaS9o3gR9pwNDvD2HcEktI8kOUzxb5jqbe2seobw1Iyeot7Vi2e"
 
 var app = new Vue({
   el: "#teamdata-app",
@@ -59,6 +60,17 @@ var app = new Vue({
 
       console.log(this.team, this.event)
 
-      fetch("https://www.thebluealliance.com/api/v3/team/" + this.team.key + "/event/" + this.event.key)
+      fetch("https://www.thebluealliance.com/api/v3/team/" + this.team.key + "/event/" + this.event.key + "/matches/simple", {
+        headers: {
+          "X-TBA-Auth-Key": TBA_AUTH
+        }
+      }).then(function (val) {
+        console.log("Response", val)
+        val.json().then((json) => {
+          console.log("JSON", json)
+        })
+      }).catch((val) => {
+        console.log(val)
+      })
   }
 })
