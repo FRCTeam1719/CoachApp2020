@@ -3,6 +3,7 @@ var urlsToCache = [
   '/CoachApp2020/',
   '/CoachApp2020/style.css',
   '/CoachApp2020/index.js',
+  "/CoachApp2020/teamdata/",
   "/CoachApp2020/teamdata/teamdata.js"
 ];
 self.addEventListener('install', function(event) {

@@ -9,13 +9,19 @@
     display:none;
 }
 #download{
-    display:none;
+    display:initial;
 }
 #download.active{
     display:initial;
 }
 #dlbtn{
     cursor:pointer;
+    background-color: #ffcc00;
+    width: 400px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 @media all and (display-mode: standalone){
